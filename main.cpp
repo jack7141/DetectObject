@@ -38,7 +38,7 @@ int main()
         cvtColor(frame, hsv, COLOR_BGR2HSV); //Convert the captured frame from BGR to HSV
 
         Mat mask;
-
+//inRange(hsv, Scalar(iLowH, iLowS, iLowV), Scalar(iHighH, iHighS, iHighV), mask);
         inRange(hsv, Scalar(68, 119, 139), Scalar(179, 255, 255), mask); //Threshold the image
 
         //morphological opening (remove small objects from the foreground)
